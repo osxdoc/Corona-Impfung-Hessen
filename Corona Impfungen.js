@@ -79,6 +79,6 @@ var impfGes_pro = impfGes/83020000*100;
   label.font = Font.boldSystemFont(11);
   label.textColor = Device.isUsingDarkAppearance() ? Color.white() : Color.black();  
   
-  
+  list.refreshAfterDate = new Date (Date.now() + 60*60*1000)
  return list;
 }
