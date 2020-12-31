@@ -71,7 +71,7 @@ var impfGes_pro = impfGes/83020000*100;
   impfGes_pro=impfGes_pro.toFixed(2);
   
   label = list.addText("" + impfGes + " - " + impfGes_pro + "%");
-  label.font = Font.boldSystemFont(15.8);
+  label.font = Font.boldSystemFont(15);
   label.textColor = Color.green();
   
   var label = list.addText("Impfungen Gesamt");
@@ -106,7 +106,7 @@ var impfGes_pro = impfGes/83020000*100;
   impfBL_pro=impfBL_pro.toFixed(2);
     
   label = list.addText("" + impfBL + " - " + impfBL_pro + "%");
-  label.font = Font.boldSystemFont(15.8);
+  label.font = Font.boldSystemFont(15);
   label.textColor = Color.green()
   
   label = list.addText("Impfungen " + BL_Text );
