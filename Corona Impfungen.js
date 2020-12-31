@@ -23,9 +23,9 @@
 */
 
 //Bundesland
-const BL = 9
+const BL = 6
 
-const apiUrl = ""
+const apiUrl = "https://interactive.zeit.de/cronjobs/2020/corona/impfzahlen.json"
 
 
 const widget = await createWidget();
