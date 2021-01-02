@@ -76,9 +76,9 @@ async function createWidget() {
     let impfBL_pro = data.bundeslaender[BL].historical[0].value / einwohner * 100;
 
     let txt_impfGes = impfGes.toLocaleString('de-DE');
-    let txt_impfGes_percentage = parseInt(impfGes_pro.toFixed(2)).toLocaleString('de-DE')
+    let txt_impfGes_percentage = parseFloat(impfGes_pro.toFixed(2)).toLocaleString('de-DE')
     let txt_impfBL = data.bundeslaender[BL].historical[0].value.toLocaleString('de-DE');
-    let txt_impfBL_percentage = parseInt(impfBL_pro.toFixed(2)).toLocaleString('de-DE')
+    let txt_impfBL_percentage = parseFloat(impfBL_pro.toFixed(2)).toLocaleString('de-DE')
 
     // all the rendering
     if (Device.isUsingDarkAppearance()) {
