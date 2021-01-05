@@ -91,12 +91,19 @@ async function createWidget() {
         list.backgroundGradient = gradient
     }
 
+    let date_to_print = ""
+    if (data.timestamp && data.timestamp.includes(",")) {
+      date_to_print =  data.timestamp.split(",")[0];
+    } else {
+      date_to_print =  data.timestamp;
+    }
+  
     let line1_header = "💉 Impfungen".toUpperCase()
     let line2_vaccines_nationwide = "" + txt_impfGes + " - " + txt_impfGes_percentage + "%" // e.g. 188.553 - 0,23%
     let line3_vaccines_total_text = "Impfungen Gesamt"
     let line4_vaccines_state = "" + txt_impfBL + " - " + txt_impfBL_percentage + "%" // e.g. 24.791 - 0,40%
     let line5_vaccines_state_text = "Impfungen " + BL_Text  //e.g. Impfungen Hessen
-    let line6_date = "Stand: " + data.timestamp[0].id.split(",")[0];
+    let line6_date = "Stand: " + date_to_print;
 
     // Line 1: Header
     const header = list.addText(line1_header)
